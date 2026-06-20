@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-paper-50: #FBF9F4;
+  --color-paper-100: #F6F2E8;
+  --color-paper-200: #ECE4D2;
+  --color-paper-300: #DDD0AF;
+
+  --color-ink-50: #EEF0F4;
+  --color-ink-100: #D4D9E3;
+  --color-ink-300: #8B95AB;
+  --color-ink-500: #3D4660;
+  --color-ink-700: #252B3D;
+  --color-ink-900: #13161F;
+
+  --color-signal: #C4512F;
+  --color-signal-light: #E8C4B0;
+  --color-signal-dark: #8A3A22;
+
+  --color-sage: #5B7B5A;
+  --color-sage-light: #D9E5D3;
+  --color-sage-dark: #3D5A3C;
+
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #FBF9F4;
+  color: #13161F;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Subtle paper grain texture on the page background */
+.paper-grain {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(19, 22, 31, 0.025) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+/* Custom focus ring — visible, on-brand */
+:focus-visible {
+  outline: 2px solid #C4512F;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F2E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD0AF;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
